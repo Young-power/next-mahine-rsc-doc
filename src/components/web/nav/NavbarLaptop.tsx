@@ -38,7 +38,7 @@ const NavbarLaptop = () => {
             `}
             >
 
-              <Link scroll={false} href={link.href}>{link.label}</Link>
+              <Link href={link.href}>{link.label}</Link>
 
 
             </li>
