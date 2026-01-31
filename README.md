@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 next-mahine-rsc-inspector — Documentation Website
 
-## Getting Started
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/Young-power/next-mahine-rsc-inspector/main/public/assets/logobib.png"
+    width="180"
+    alt="Next Mahine RSC Inspector Logo"
+  />
+</p>
 
-First, run the development server:
+<p align="center">
+  Official documentation website for <b>next-mahine-rsc-inspector</b>
+</p>
+
+---
+
+## 📘 About this website
+
+This repository contains the **documentation website** for the  
+**next-mahine-rsc-inspector** open-source project.
+
+The website explains:
+
+- How the library works
+- How to use the CLI and API
+- Real-world examples
+- Architecture concepts
+- Roadmap and future features
+
+---
+
+## 🧱 Built with
+
+- **Next.js** (App Router)
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **shadcn/ui**
+- **next-themes**
+
+---
+
+## 🚀 Getting Started (Local Development)
+
+### 1️⃣ Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/Young-power/next-mahine-rsc-inspector.git
+cd next-mahine-rsc-inspector
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+👤 Author
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Mahaman Mahine Kamagaté
+Web & Mobile Developer · Creator of Libraries for the JavaScript Ecosystem
+From Côte d’Ivoire 🇨🇮
 
-## Learn More
+GitHub: https://github.com/Young-power
 
-To learn more about Next.js, take a look at the following resources:
+Portfolio: https://my-portfolio-one-livid-10.vercel.app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Facebook: https://www.facebook.com/mahaman.kamagate.50/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Buy me a coffee: https://buymeacoffee.com/mahine
