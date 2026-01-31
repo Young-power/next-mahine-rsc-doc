@@ -68,15 +68,25 @@ const Cli = () => {
                                         </div>
                                     </div>
 
-                                    {isActive && (
+                                    {isActive ? (
                                         <p className="
         text-sm px-2 py-1 rounded-full
         bg-green-500/10 text-green-600
-        dark:bg-green-400/10 dark:text-green-400 lg:text-lg flex justify-center items-center
+        dark:bg-green-400/10 dark:text-green-400 italic font-bold flex justify-center items-center
       "><VscDebugBreakpointData />
-                                            <span>active</span>
+                                            <span>Active</span>
                                         </p>
-                                    )}
+                                    ):  <p className="
+        text-sm px-2 py-1 rounded-full
+        bg-red-500/10 text-red-600
+        dark:bg-red-400/10 dark:text-red-400 font-bold flex justify-center items-center
+      "><VscDebugBreakpointData />
+                                            <span className="italic">Inactive</span>
+                                        </p>
+                                
+                                
+                                
+                                }
                                 </div>
                             </button>
                         </CardMotion>
