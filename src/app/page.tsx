@@ -8,6 +8,7 @@ import Exemple from "@/components/web/exemples/Exemple";
 import Footer from "@/components/web/footer/Footer";
 import Hero from "@/components/web/hero/Hero";
 import Install from "@/components/web/install/Install";
+import License from "@/components/web/license/License";
 import LogoSection from "@/components/web/logoSection/LogoSection";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
    <Api />
    <Exemple />
    <Author />
+   <License  />
    <LogoSection />
    <Footer />
  </CardBib>
