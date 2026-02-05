@@ -42,12 +42,15 @@ run();`}
                     code={`import { analyzeFile } from "next-mahine-rsc-inspector";
 
 async function run() {
-  const filePath = "app/page.tsx";
+
+ //You put the path of the file here
+  const filePath = "src/app/page.tsx";
+
   const result = await analyzeFile(filePath);
 
-  console.log("File:", filePath);
-  console.log("Is client:", result.isClient);
-  console.log("Is server:", result.isServer);
+
+  console.log("File path:", filePath);
+  console.log("Is client:", result?.isClient);
 }
 
 run();`}
@@ -56,21 +59,7 @@ run();`}
 
 
 
-            <ZoomElement>
-                <CodeBlockLight
-                    filename="compute-stats.ts"
-                    code={`import { scanProject, computeStats } from "next-mahine-rsc-inspector";
-
-async function run() {
-  const project = await scanProject(process.cwd());
-  const stats = computeStats(project.files);
-
-  console.log(stats);
-}
-
-run();`}
-                />
-            </ZoomElement>
+            
 
 
 
