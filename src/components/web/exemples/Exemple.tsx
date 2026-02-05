@@ -25,8 +25,8 @@ async function run() {
   console.log("Total files:", result?.total);
   console.log("Client components:", result?.client);
   console.log("Server components:", result?.server);
-  console.log("Client percentages:", result?.ratioClient);
-  console.log("Server percentages:", result?.ratioServer);
+  console.log("Client percentages:", result?.ratioClient %);
+  console.log("Server percentages:", result?.ratioServer %);
 
 }
 
