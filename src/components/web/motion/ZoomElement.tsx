@@ -8,7 +8,8 @@ const ZoomElement = ({ children }: { children: React.ReactNode }) => {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 1, ease: "easeOut" }}
-    >
+  className="w-full"
+>
       {children}
     </motion.div>
   );

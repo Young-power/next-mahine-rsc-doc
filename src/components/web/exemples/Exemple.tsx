@@ -22,9 +22,12 @@ const Exemple = () => {
 async function run() {
   const result = await scanProject(process.cwd());
 
-  console.log("Total files:", result.totalFiles);
-  console.log("Client components:", result.clientComponents);
-  console.log("Server components:", result.serverComponents);
+  console.log("Total files:", result?.total);
+  console.log("Client components:", result?.client);
+  console.log("Server components:", result?.server);
+  console.log("Client percentages:", result?.ratioClient);
+  console.log("Server percentages:", result?.ratioServer);
+
 }
 
 run();`}
