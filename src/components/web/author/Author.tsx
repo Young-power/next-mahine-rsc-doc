@@ -41,7 +41,7 @@ const Author = () => {
             <div className="mt-6 flex justify-center items-center gap-4 text-sm">
                <CardMotion delay={0.5}>
                  <a
-                    href="https://github.com/dashboard"
+                    href="https://github.com/Young-power"
                     target="_blank"
                     className=""
                 >
