@@ -78,6 +78,15 @@ const Author = () => {
                     Portfolio
                 </a>
                </CardMotion>
+                  <CardMotion delay={0.8}>
+                <a
+                    href="https://www.youtube.com/@youngworker"
+                    target="_blank"
+                    className="hover:underline"
+                >
+                    Youtube
+                </a>
+               </CardMotion>
             </div>
         </section>
     )
