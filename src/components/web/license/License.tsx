@@ -2,12 +2,34 @@
 import { IoLogoGithub } from 'react-icons/io'
 import { SiNpm } from 'react-icons/si'
 import ZoomElement from '../motion/ZoomElement'
+import { useEffect, useState } from 'react';
 
 const License = () => {
+    const [version, setVersion] = useState<string>("");
+
+    useEffect(() => {
+        getVersion();
+    }, [])
+
+    const getVersion = async () => {
+
+        try {
+            const res = await fetch("../../api/version");
+            const data = await res.json();
+            setVersion(data.version)
+
+        } catch (error) {
+
+            console.log(`Erreur de la récuperation de la version: ${error}`)
+
+        }
+
+    }
+
     return (
         <section className='w-full bg-white flex justify-center dark:bg-black py-5'>
- 
-            <div className='w-full max-w-xl mx-auto '> 
+
+            <div className='w-full max-w-xl mx-auto '>
                 <ZoomElement>
                     <div className=' w-full border border-gray-200 rounded-2xl lg:w-150 px-5 text-black shadow-md py-7'>
                         <h1 className='my-5 text-xl font-semibold text-muted-foreground'>PLUGIN DETAIL</h1>
@@ -16,7 +38,7 @@ const License = () => {
                             <div className='flex w-full justify-around items-center gap-3  '>
                                 <div className='w-1/2 bg-zinc-100 p-3 rounded-lg flex flex-col'>
                                     <span className='text-muted-foreground font-semibold'>Version</span>
-                                    <span>1.0.1</span>
+                                    <span>{version}</span>
                                 </div>
 
                                 <div className='w-1/2 bg-zinc-100 p-3 rounded-lg flex flex-col'>

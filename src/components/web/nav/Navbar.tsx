@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import NavbarLaptop from "./NavbarLaptop"
 import NavbarPhone from "./NavbarPhone"
 import Image from "next/image";
@@ -13,6 +13,7 @@ const Navbar = () => {
 
 
     const [shadowNav, SetShadowNav] = useState<boolean>(false);
+    const [version, setVersion] = useState<string>("");
 
 
 
@@ -21,6 +22,26 @@ const Navbar = () => {
         SetShadowNav(!shadowNav);
     };
 
+
+    
+        useEffect(() => {
+            getVersion();
+        }, [])
+    
+        const getVersion = async () => {
+    
+            try {
+                const res = await fetch("../../api/version");
+                const data = await res.json();
+                setVersion(data.version)
+    
+            } catch (error) {
+    
+                console.log(`Erreur de la récuperation de la version: ${error}`)
+    
+            }
+    
+        }
 
     return (
         <header
@@ -70,7 +91,7 @@ const Navbar = () => {
                     <div className=" absolute right-16 top-[35%] space-x-3">
                         <CardMotion delay={0.5}>
                             <ModeToggle />
-                            <span className="text-sm mb-1 italic text-muted-foreground  ml-2 font-bold -mt-3">V^1.0.1</span>
+                            <span className="text-sm mb-1 italic text-muted-foreground  ml-2 font-bold -mt-3">V^{version}</span>
 
                         </CardMotion>
 
@@ -88,7 +109,7 @@ const Navbar = () => {
                         <div className="flex flex-col justify-center items-center ">
                             {
                                 <CardMotion delay={0.9} style="flex flex-col">
-                                    <span className="text-[10px] mb-1 italic font-bold -mt-3">V^1.0.1</span>
+                                    <span className="text-[10px] mb-1 italic font-bold -mt-3">V^{version}</span>
                                     <ModeToggle />
                                 </CardMotion>
 
