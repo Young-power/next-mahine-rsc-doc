@@ -104,12 +104,87 @@ run();`}
             <ZoomElement>
                 <CodeBlockLight
                     filename="report.json"
-                    code={`{
-  "totalFiles": 190,
-  "clientComponents": 88,
-  "serverComponents": 102,
-  "clientRatio": 46,
-  "serverRatio": 54
+                    code={`
+✅ App directory: src
+{
+  "projectName": "next-mahine-rsc-doc",
+  "projectRoot": "/media/mahine/2cd32d5c-0a41-43a3-9e8e-d67f38891ca2/next-mahine-rsc-doc",
+  "appDir": "/media/mahine/2cd32d5c-0a41-43a3-9e8e-d67f38891ca2/next-mahine-rsc-doc/src",
+  "folders": {
+    "app": {
+      "server": 3,
+      "client": 0
+    },
+    "lib": {
+      "server": 1,
+      "client": 0
+    },
+    "components/goTop": {
+      "server": 0,
+      "client": 2
+    },
+    "components/ui": {
+      "server": 1,
+      "client": 1
+    },
+    "components/web": {
+      "server": 1,
+      "client": 0
+    },
+    "components/ui/dark": {
+      "server": 0,
+      "client": 2
+    },
+    "components/web/api": {
+      "server": 0,
+      "client": 1
+    },
+    "components/web/author": {
+      "server": 0,
+      "client": 1
+    },
+    "components/web/cli": {
+      "server": 1,
+      "client": 1
+    },
+    "components/web/exemples": {
+      "server": 0,
+      "client": 2
+    },
+    "components/web/footer": {
+      "server": 0,
+      "client": 1
+    },
+    "components/web/hero": {
+      "server": 0,
+      "client": 1
+    },
+    "components/web/install": {
+      "server": 1,
+      "client": 2
+    },
+    "components/web/license": {
+      "server": 0,
+      "client": 1
+    },
+    "components/web/logoSection": {
+      "server": 0,
+      "client": 1
+    },
+    "components/web/motion": {
+      "server": 0,
+      "client": 3
+    },
+    "components/web/nav": {
+      "server": 0,
+      "client": 3
+    }
+  },
+  "total": 30,
+  "client": 22,
+  "server": 8,
+  "ratioServer": 27,
+  "ratioClient": 73
 }`}
                 />
             </ZoomElement>
