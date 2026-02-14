@@ -102,7 +102,7 @@ const License = () => {
                                     <span className='text-muted-foreground font-semibold'>
                                         Total downloads
                                     </span>
-                                    <span>220</span>
+                                    <span>225</span>
                                 </div>
 
                             </div>
