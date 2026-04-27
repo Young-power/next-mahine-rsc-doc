@@ -6,14 +6,21 @@ import { VscDebugBreakpointData } from "react-icons/vsc";
 import { IoCopyOutline } from "react-icons/io5";
 import TextMotion from "../motion/TextMotion";
 import CardMotion from "../motion/CardMotion";
+import { toast, ToastContainer } from "react-toastify";
 
 const Cli = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const active = cliCommands[activeIndex];
-
+    const copyCmd = () => {
+        navigator.clipboard.writeText(active.command)
+        toast.success("Copied successfully", {
+            position: "top-center",
+            autoClose: 3000,
+        });
+    }
     return (
         <div id="cli" className="w-full max-w-2xl mx-auto space-y-8 mt-16">
-
+             <ToastContainer />
             {/* Header */}
             <div className="space-y-2">
                 <TextMotion delay={0.5}>
@@ -76,17 +83,17 @@ const Cli = () => {
       "><VscDebugBreakpointData />
                                             <span>Active</span>
                                         </p>
-                                    ):  <p className="
+                                    ) : <p className="
         text-sm px-2 py-1 rounded-full
         bg-red-500/10 text-red-600
         dark:bg-red-400/10 dark:text-red-400 font-bold flex justify-center items-center
       "><VscDebugBreakpointData />
-                                            <span className="italic">Inactive</span>
-                                        </p>
-                                
-                                
-                                
-                                }
+                                        <span className="italic">Inactive</span>
+                                    </p>
+
+
+
+                                    }
                                 </div>
                             </button>
                         </CardMotion>
@@ -107,8 +114,8 @@ const Cli = () => {
                             CLI command
                         </span>
                         <button
-                            onClick={() => navigator.clipboard.writeText(active.command)}
-                            className="text-xl py-1 "
+                            onClick={copyCmd}
+                            className="text-xl py-1 cursor-pointer  "
                         >
                             <IoCopyOutline className="text-green-300 text-xl lg:text-2xl" />
 

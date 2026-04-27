@@ -4,6 +4,7 @@ import { useState } from "react";
 import { options, PackageManager } from "./optionData";
 import { IoCopyOutline } from "react-icons/io5";
 import CardMotion from "../motion/CardMotion";
+import { toast, ToastContainer } from "react-toastify";
 
 const InstallOption = () => {
     const [selected, setSelected] = useState<PackageManager>("NPM");
@@ -13,12 +14,16 @@ const InstallOption = () => {
 
     const copyFunc = () => {
         navigator.clipboard.writeText(activeOption.value)
+        toast.success("Copied!", {
+            position: "top-center",
+            autoClose: 2000,
+        });
     }
 
 
     return (
         <div className="w-full max-w-xl mx-auto space-y-4">
-
+            <ToastContainer />
             {/* Tabs */}
 
             <CardMotion delay={0.9}>
@@ -58,7 +63,7 @@ const InstallOption = () => {
 
                     <button
                         onClick={copyFunc}
-                        className="absolute top-3 right-0 text-xs px-3 py-1 rounded-md
+                        className="absolute top-3 cursor-pointer right-0 text-xs px-3 py-1 rounded-md
                      bg-zinc-800 hover:bg-zinc-700 text-zinc-300 transition"
                     >
                         <IoCopyOutline className="text-green-300 text-xl" />
