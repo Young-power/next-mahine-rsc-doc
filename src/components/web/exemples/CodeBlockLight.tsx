@@ -32,7 +32,7 @@ export default function CodeBlockLight({
     a.download = filename;
     a.click();
     URL.revokeObjectURL(url);
-    toast.success("Download completed")
+    toast.success("Download completed");
   };
 
   return (
@@ -46,7 +46,7 @@ export default function CodeBlockLight({
       <div className="absolute right-2 top-2 flex gap-2">
         <button
           onClick={copy}
-          className="rounded-md p-2 hover:bg-zinc-100"
+          className="rounded-md p-2 hover:bg-zinc-100 cursor-pointer"
         >
           {copied ? (
             <Check className="h-7 w-7 text-green-600" />
@@ -57,7 +57,7 @@ export default function CodeBlockLight({
 
         <button
           onClick={download}
-          className="rounded-md p-2 hover:bg-zinc-100"
+          className="rounded-md p-2 hover:bg-zinc-100 cursor-pointer"
         >
           <Download className="h-5 w-5 text-black " />
         </button>

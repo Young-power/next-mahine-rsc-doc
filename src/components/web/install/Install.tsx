@@ -1,10 +1,12 @@
 "use client"
 import InstallOption from './InstallOption'
 import TextMotion from '../motion/TextMotion'
+import { ToastContainer } from "react-toastify";
 
 const Install = () => {
     return (
         <section id="install" className='text-center mt-10  flex flex-col justify-center items-center '>
+            <ToastContainer />
 
             <TextMotion delay={0.6}>
                 <p className='text-3xl font-bold italic text-muted-foreground lg:text-4xl '>How to Install </p>
@@ -15,7 +17,6 @@ const Install = () => {
             
             <div className='mt-10'>
                 <InstallOption />
-
             </div>
         </section>
     )

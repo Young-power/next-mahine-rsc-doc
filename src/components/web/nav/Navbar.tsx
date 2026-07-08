@@ -23,25 +23,25 @@ const Navbar = () => {
     };
 
 
-    
-        useEffect(() => {
-            getVersion();
-        }, [])
-    
-        const getVersion = async () => {
-    
-            try {
-                const res = await fetch("../../api/version");
-                const data = await res.json();
-                setVersion(data.version)
-    
-            } catch (error) {
-    
-                console.log(`Erreur de la récuperation de la version: ${error}`)
-    
-            }
-    
+
+    useEffect(() => {
+        getVersion();
+    }, [])
+
+    const getVersion = async () => {
+
+        try {
+            const res = await fetch("../../api/version");
+            const data = await res.json();
+            setVersion(data.version)
+
+        } catch (error) {
+
+            console.log(`Erreur de la récuperation de la version: ${error}`)
+
         }
+
+    }
 
     return (
         <header
@@ -118,7 +118,8 @@ const Navbar = () => {
                         </div>
                         {
                             shadowNav ? <ZoomElement> <CgClose className="text-3xl cursor-pointer" onClick={handleShowNavbar} /></ZoomElement> :
-                                <ZoomElement>                             <FiMenu className="text-3xl cursor-pointer" onClick={handleShowNavbar} />
+                                <ZoomElement>
+                                    <FiMenu className="text-3xl cursor-pointer" onClick={handleShowNavbar} />
                                 </ZoomElement>}
                     </div>
 

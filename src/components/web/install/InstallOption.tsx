@@ -23,9 +23,7 @@ const InstallOption = () => {
 
     return (
         <div className="w-full max-w-xl mx-auto space-y-4">
-            <ToastContainer />
             {/* Tabs */}
-
             <CardMotion delay={0.9}>
                 <div className="flex gap-2 bg-zinc-100 dark:bg-zinc-900 p-1 rounded-xl">
                     {options.map((data) => {
@@ -64,7 +62,7 @@ const InstallOption = () => {
                     <button
                         onClick={copyFunc}
                         className="absolute top-3 cursor-pointer right-0 text-xs px-3 py-1 rounded-md
-                     bg-zinc-800 hover:bg-zinc-700 text-zinc-300 transition"
+                     bg-zinc-800 hover:bg-zinc-700 text-zinc-300 transition "
                     >
                         <IoCopyOutline className="text-green-300 text-xl" />
                     </button>
