@@ -33,7 +33,7 @@ const Navbar = () => {
         try {
             const res = await fetch("../../api/version");
             const data = await res.json();
-            setVersion(data.version)
+            setVersion(data.version);
 
         } catch (error) {
 
@@ -91,7 +91,7 @@ const Navbar = () => {
                     <div className=" absolute right-16 top-[35%] space-x-3">
                         <CardMotion delay={0.5}>
                             <ModeToggle />
-                            <span className="text-sm mb-1 italic text-muted-foreground  ml-2 font-bold -mt-3">V^{version}</span>
+                            <span className="text-sm mb-1 italic text-muted-foreground   ml-2 font-bold -mt-3">V^{version}</span>
 
                         </CardMotion>
 

@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { cliCommands } from "./cliData";
 import { VscDebugBreakpointData } from "react-icons/vsc";

@@ -13,7 +13,7 @@ const BannerBib = () => {
                     width={300} height={300}
                     quality={100} priority
                     alt="banner"
-                    className='rounded-2xl'
+                    className='rounded-2xl  dark:border dark:border-white dark:shadow dark:shadow-amber-50'
                 />
 
             </div>
