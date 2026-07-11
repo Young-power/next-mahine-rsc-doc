@@ -2,6 +2,7 @@
 import ButtonTop from "@/components/goTop/ButtonTop";
 import Api from "@/components/web/api/Api";
 import Author from "@/components/web/author/Author";
+import BannerBib from "@/components/web/banner/BannerBib";
 import CardBib from "@/components/web/CardBib";
 import Cli from "@/components/web/cli/Cli";
 import Exemple from "@/components/web/exemples/Exemple";
@@ -13,18 +14,19 @@ import LogoSection from "@/components/web/logoSection/LogoSection";
 
 export default function Home() {
   return (
- <CardBib>
-  <ButtonTop />
-   <Hero />
-   <Install />
-   <Cli />
-   <Api />
-   <Exemple />
-   <Author />
-   <License  />
-   <LogoSection />
-   <Footer />
- </CardBib>
- 
+    <CardBib>
+      <ButtonTop />
+      <Hero />
+      <Install />
+      <Cli />
+      <Api />
+      <Exemple />
+      <Author />
+      <License />
+      <BannerBib />
+      <LogoSection />
+      <Footer />
+    </CardBib>
+
   );
 }

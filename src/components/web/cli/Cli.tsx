@@ -10,7 +10,9 @@ import { toast, ToastContainer } from "react-toastify";
 
 const Cli = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+
     const active = cliCommands[activeIndex];
+
     const copyCmd = () => {
         navigator.clipboard.writeText(active.command)
         toast.success("Copied successfully", {
@@ -20,7 +22,7 @@ const Cli = () => {
     }
     return (
         <div id="cli" className="w-full max-w-2xl mx-auto space-y-8 mt-16">
-             <ToastContainer />
+            <ToastContainer />
             {/* Header */}
             <div className="space-y-2">
                 <TextMotion delay={0.5}>
