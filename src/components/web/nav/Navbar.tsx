@@ -9,6 +9,7 @@ import { FiMenu } from "react-icons/fi";
 import CardMotion from "../motion/CardMotion";
 import TextMotion from "../motion/TextMotion";
 import ZoomElement from "../motion/ZoomElement";
+import { getVersion } from "../version/version";
 const Navbar = () => {
 
 
@@ -28,20 +29,13 @@ const Navbar = () => {
         getVersion();
     }, [])
 
-    const getVersion = async () => {
-
-        try {
-            const res = await fetch("../../api/version");
-            const data = await res.json();
-            setVersion(data.version);
-
-        } catch (error) {
-
-            console.log(`Erreur de la récuperation de la version: ${error}`)
-
+    useEffect(() => {
+        const v = async () => {
+            const res = await getVersion();
+            setVersion(res);
         }
-
-    }
+        v();
+    }, []);
 
     return (
         <header

@@ -3,28 +3,19 @@ import { IoLogoGithub } from 'react-icons/io'
 import { SiNpm } from 'react-icons/si'
 import ZoomElement from '../motion/ZoomElement'
 import { useEffect, useState } from 'react';
+import { getVersion } from '../version/version';
 
 const License = () => {
     const [version, setVersion] = useState<string>("");
 
     useEffect(() => {
-        getVersion();
+        const v = async  () => {
+            const res = await getVersion();
+            setVersion(res);
+        }
+        v();
     }, [])
 
-    const getVersion = async () => {
-
-        try {
-            const res = await fetch("../../api/version");
-            const data = await res.json();
-            setVersion(data.version)
-
-        } catch (error) {
-
-            console.log(`Erreur de la récuperation de la version: ${error}`)
-
-        }
-
-    }
 
     return (
         <section className='w-full bg-white flex justify-center dark:bg-black py-5'>
